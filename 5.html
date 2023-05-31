@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+ <script>
+ function Complete() {
+    let elem = `Прізвище: ${document.sel1.family.value} 
+    Ім'я: ${document.sel1.name.value} 
+    Рік: ${document.sel1.age.value} 
+    Телефон: ${document.sel1.phone.value}`
+    alert(elem);
+ }
+ </script>
+</head>
+<body>
+<H1>Заповніть анкету</H1>
+<FORM NAME="sel1">
+ <!-- Анкета -->
+ <TABLE>
+ <TR><TD><B>Прізвище:<B></TD>
+ <TD><INPUT NAME="family" SIZE=20
+ onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+ <TR><TD><B>Ім'я:<B></TD>
+ <TD><INPUT NAME="name" SIZE=20
+ onBlur="this.value=this.value.toUpperCase()"></TD></TR>
+ <TR><TD><B>Вік:<B></TD>
+ <TD><INPUT NAME="age" SIZE=3 VALUE="18"
+ onBlur="this.value=CheckAge(this.value)"
+ onFocus="this.select()"></TD></TR>
+ <TR><TD><B>Телефон:<B></TD>
+ <TD><INPUT NAME="phone" SIZE=10></TD></TR>
+ </TABLE>
+ <!-- Кнопки готовності та скидання -->
+ <INPUT TYPE="button" VALUE="Ok" onClick="Complete();">
+ <INPUT TYPE="reset" VALUE="Cancel">
+</FORM>
+</body>
+</html>
